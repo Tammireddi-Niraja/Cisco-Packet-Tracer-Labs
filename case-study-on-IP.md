@@ -1,20 +1,21 @@
-# Cisco Packet Tracer Networking Labs
+# Cisco Packet Tracer Networking 
 
 ## Overview
 
-This repository contains basic networking experiments created using Cisco Packet Tracer. These labs demonstrate IP addressing, network connectivity, and common networking scenarios for beginners.
+This contains basic networking experiments created using Cisco Packet Tracer. These demonstrate IP addressing, network connectivity, and common networking scenarios for beginners.
 
 ## Experiments
 
 ### 1. Point-to-Point Connection
 
 **Objective**
-- Connect two PCs through a switch.
+- Connect two PCs.
 - Assign IP addresses in the same network.
 - Verify connectivity using the `ping` command.
 
 **Result**
 - Communication was successful because both PCs were configured in the same network.
+-  recevied:100%, send:100% (loss=0%)
 
 ### 2. One PC with IP Address and One PC Without IP
 
@@ -28,6 +29,7 @@ This repository contains basic networking experiments created using Cisco Packet
 
 **Result**
 - Ping failed because the destination PC was not assigned an IP address.
+- recevied:0%, send:100% (loss=100%)
 
 ### 3. Two PCs with Different IP Classes
 
@@ -40,10 +42,11 @@ This repository contains basic networking experiments created using Cisco Packet
 
 **Result**
 - Ping failed because the PCs were on different networks and no router was configured to route traffic.
+-  recevied:0%, send:100% (loss=100%)
 
-## Learning Outcomes
+## Outcomes
 
-After completing these experiments, you can understand:
+After completing this i can understand:
 
 - Basic network topology
 - IP address configuration
