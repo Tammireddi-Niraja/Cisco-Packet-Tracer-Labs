@@ -1,0 +1,65 @@
+# DHCP Configuration in Cisco Packet Tracer
+
+## Devices Required
+1. Router
+2. Switch
+3. Server
+4. 5 PCs (PC0, PC1, PC2, PC3, PC4)
+
+## Step 1: Connect the Devices
+- Connect all five PCs to the Switch using Copper Straight-Through cable.
+- Connect the Server to the Switch.
+- Connect the Router to the Switch.
+
+## Step 2: Configure the Router
+- Click on the Router.
+- Select the **Config** tab.
+- Click **FastEthernet0/0**.
+- Turn **Port Status** to **On**.
+
+Assign:
+- IP Address: **10.0.0.1**
+- Subnet Mask: **255.255.255.0**
+
+This IP Address acts as the **Default Gateway**.
+
+## Step 3: Configure the Server
+- Click on the Server.
+- Go to **Desktop → IP Configuration**.
+
+Enter:
+- IP Address: **10.0.0.10**
+- Subnet Mask: **255.255.255.0**
+- Default Gateway: **10.0.0.1**
+
+## Step 4: Enable DHCP on the Server
+- Go to the **Services** tab.
+- Click **DHCP**.
+- Turn the **DHCP Service** ON.
+- Create a DHCP Pool and Enter:
+  - Default Gateway: **10.0.0.1**
+  - DNS Server: *(Optional)*
+  - Start IP Address: **10.0.0.11**
+  - Subnet Mask: **255.255.255.0**
+- Click **Save** or **Add**.
+
+## Step 5: Configure the PCs
+- Click on the PC.
+- Go to **Desktop → IP Configuration**.
+- Select **DHCP** instead of Static.
+- Wait a few seconds.
+
+Each PC automatically receives:
+
+- PC0 : **10.0.0.11**
+- PC1 : **10.0.0.12**
+- PC2 : **10.0.0.13**
+- PC3 : **10.0.0.14**
+- PC4 : **10.0.0.15**
+
+## Step 6: Verify Connectivity
+Ping **10.0.0.1** → Router
+
+Ping **10.0.0.10** → Server
+
+If the replies are **Successful**, the DHCP configuration is working correctly.
